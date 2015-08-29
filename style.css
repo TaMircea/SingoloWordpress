@@ -288,6 +288,62 @@ height: 100%; */
     content: "×";
 
 }
+
+.post{
+  background: #2D304B;
+
+}
+
+.post_title{
+  text-align: left;
+
+}
+
+.post_title h1{
+  margin: 0;
+  padding: 1%;
+}
+
+.post_content{
+  background: #2D303A;
+}
+.post_content p{
+  display: inline-block;
+  padding: 1%;
+  max-width: 70%;
+  text-align: justify;
+}
+
+.post_thumbnail{
+  display: inline-block;
+  margin: 1%;
+  max-width: 20%;
+}
+.post .navigation{
+  padding: 1% 0;
+  text-align: center;
+}
+.nav-links div{
+  display: inline-block;
+  border-radius: 5px;
+  border:2px black solid;
+  margin-right: 25px;
+  padding: 1%;
+  background: #2D303A;
+
+  transition: all 1s;
+ }
+ .nav-links div:hover{
+  border:2px white solid;
+  color: white;
+  background: #BBB;
+ }
+
+ .navigation > .screen-reader-text{
+  display: none;
+ }
+
+
 /* @ABOUT US */
 .about{
   padding: 70px 0px;
