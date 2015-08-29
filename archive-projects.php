@@ -3,7 +3,7 @@
 <?php get_header() ?>
     <script>
       window.projects =[
-      <?php $args = array( 'post_type' => 'projects', 'posts_per_page' => 20  );
+      <?php $args = array( 'post_type' => 'projects', 'posts_per_page' => 20, 'order' => 'ASC'  );
       $page_title = $wp_query->post->post_title;
       $description = get_post_meta($post->ID, 'Portfolio', true);
       $loop = new WP_Query( $args );
@@ -17,7 +17,8 @@
         name: '"; the_title(); echo " ',
         photo: '"; echo $image[0]; echo" ',
         info: '"; echo get_the_content(); echo "',
-        categories:"; echo $js_array; echo "
+        categories:"; echo $js_array; echo ",
+        link: '"; echo get_permalink(); echo "'
       },";
       endwhile;
       ?>
