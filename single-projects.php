@@ -15,7 +15,7 @@
       endwhile;
     ?>
     </div>
-    <?php
+    <?php comments_template(); 
       the_post_navigation( array(
         'next_text' => '<span class="post-title">%title</span>'.
           '<span class="screen-reader-text">' . __( ' &rArr; ' ) . '</span> ',

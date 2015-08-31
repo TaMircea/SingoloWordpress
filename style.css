@@ -263,57 +263,32 @@ height: 100%; */
   position: relative;
   transform:scale(1.5,1.5);
 }
-
-.close-button{
-  margin: 0;
-  width: auto;
-  height: auto;
-
-  position: absolute;
-  right: 10px;
-  top: 10px;
-
-  cursor:pointer;
-  color: #fff;
-  border: 1px solid #AEAEAE;
-  border-radius: 30px;
-  background: #605F61;
-  font-size: 31px;
-  font-weight: bold;
-  line-height: 0px;
-  padding: 11px 3px; 
-  z-index: 300;
-}
-.close-button:before {
-    content: "×";
-
-}
-
 .post{
   background: #2D304B;
-
+  color:#AAA;
 }
-
 .post_title{
   text-align: left;
-
 }
-
 .post_title h1{
   margin: 0;
   padding: 1%;
+  color: #CCC;
 }
-
 .post_content{
-  background: #2D303A;
+  padding: 1%;
+  background: #1D202A;
+  border-radius: 6px;
 }
 .post_content p{
   display: inline-block;
   padding: 1%;
   max-width: 70%;
   text-align: justify;
+  text-indent: 50px;
+  color: white;
+  line-height: 150%;
 }
-
 .post_thumbnail{
   display: inline-block;
   margin: 1%;
@@ -322,6 +297,7 @@ height: 100%; */
 .post .navigation{
   padding: 1% 0;
   text-align: center;
+  color: #FDFDFD;
 }
 .nav-links div{
   display: inline-block;
@@ -330,7 +306,6 @@ height: 100%; */
   margin-right: 25px;
   padding: 1%;
   background: #2D303A;
-
   transition: all 1s;
  }
  .nav-links div:hover{
@@ -338,11 +313,49 @@ height: 100%; */
   color: white;
   background: #BBB;
  }
-
  .navigation > .screen-reader-text{
   display: none;
  }
 
+#commentform textarea{
+  width: 100%;
+  height: 202px;
+  color: #f48c8f;
+  padding-top: 14px;
+  padding-left: 15px; 
+  border-radius: 5px;
+  color: #5bc5f6;
+  background-color:  #1852a7;
+  border: none;
+  outline: none;
+}
+#commentform input{
+  border-radius: 5px;
+  border:1px solid #5bc5f6;
+  background: #1852a7;
+  color: #5bc5f6;
+
+}
+#commentform textarea:focus{
+  border: 2px solid #5bc5f6;
+}
+#commentform input:hover{
+  background: #5bc5f6; 
+  color: #1852a7;
+  border: 1px solid #5bc5f6;
+}
+.commentlist > li{
+  border-radius: 5px;
+  padding: 1%;
+  margin-bottom: 1%;
+}
+.commentlist > :nth-child(odd){
+  background: #7df9ff;
+
+}
+.commentlist > :nth-child(even){
+  background: #0095b6;
+}
 
 /* @ABOUT US */
 .about{
@@ -405,7 +418,7 @@ height: 100%; */
   width: 65%;
   margin-right: 40px;
 }
-.contact_form input, textarea{
+.contact_form input, .contact_form textarea{
   width: 100%;
   padding-top: 14px;
   padding-left: 15px; 
@@ -426,7 +439,7 @@ height: 100%; */
   height: 202px;
   color: #f48c8f;
 }
-.contact_form input:focus,textarea:focus{
+.contact_form input:focus,.contact_form textarea:focus{
   border: 2px solid #FF8073;
 }
 .contact_form input[type="submit"] {

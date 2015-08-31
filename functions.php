@@ -30,7 +30,7 @@ function create_post_type() {
       ),
       'public' => true,
       'has_archive' => true,
-      'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt','custom-fields' )
+      'supports' => array( 'title', 'editor', 'thumbnail', 'comments' ,'custom-fields' )
     )
   );
   register_post_type( 'services',
