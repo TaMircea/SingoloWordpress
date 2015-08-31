@@ -6,10 +6,7 @@
     <div class="page_title">
        <h1 ><?php echo get_the_title(); ?></h1>
       <p><?php echo get_post_meta($post->ID, 'About', true); ?></p>
-
     </div>
-
-
     <?php $args = array( 'post_type' => 'team');
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post();

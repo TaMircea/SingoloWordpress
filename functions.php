@@ -3,30 +3,23 @@
       register_nav_menu( 'primary', 'Main Navigation Menu' );
   }
   add_action( 'init', 'wp_register_theme_menu' );
-?>
-
-<?php add_theme_support('post-thumbnails '); ?>
-
-<?php 
-function project_init() {
-  register_taxonomy(
-    'project_type',
-    'post',
-    array(
-      'label' => __( 'Project_type' ),
-      'rewrite' => array( 'slug' => 'project_type' ),
-      'capabilities' => array(
-        'assign_terms' => 'edit_guides',
-        'edit_terms' => 'publish_guides',
-
+  add_theme_support('post-thumbnails ');
+  function project_init() {
+    register_taxonomy(
+      'project_type',
+      'post',
+      array(
+        'label' => __( 'Project_type' ),
+        'rewrite' => array( 'slug' => 'project_type' ),
+        'capabilities' => array(
+          'assign_terms' => 'edit_guides',
+          'edit_terms' => 'publish_guides',
+        )
       )
-    )
-  );
-}
-add_action( 'init', 'people_init' );
-?>
-
-<?php add_action( 'init', 'create_post_type' );
+    );
+  }
+  add_action( 'init', 'people_init' );
+  add_action( 'init', 'create_post_type' );
 add_theme_support( 'post-thumbnails' ); 
 function create_post_type() {
   register_post_type( 'projects',
@@ -85,22 +78,16 @@ function create_post_type() {
     )
   );
 }
-?>
+  add_action( 'init', 'create_proj_tax' );
+  function create_proj_tax() {
+    register_taxonomy(
+      'type',
+      'projects',
+      array(
+        'label' => __( 'Type' ),
+        'rewrite' => array( 'slug' => 'type' ),
+        'hierarchical' => true,
+      )
 
-<?php
-
-add_action( 'init', 'create_proj_tax' );
-
-function create_proj_tax() {
-  register_taxonomy(
-    'type',
-    'projects',
-    array(
-      'label' => __( 'Type' ),
-      'rewrite' => array( 'slug' => 'type' ),
-      'hierarchical' => true,
-    )
-
-  );
-}
-?>
+    );
+  }
